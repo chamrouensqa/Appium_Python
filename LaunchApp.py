@@ -17,6 +17,8 @@ desired_caps['appPackage'] = 'com.code2lead.kwad'
 desired_caps['appActivity'] = 'com.code2lead.kwad.MainActivity'
 desired_caps['app'] = ('/Users/chamrouen/Downloads/Android_Demo_App.apk')
 desired_caps['noReset'] = True
+# desired_caps['fullReset'] = True
+# we cann used full reset to uninstall the application
 
 driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub",desired_caps)
 
