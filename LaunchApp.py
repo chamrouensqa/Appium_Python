@@ -1,5 +1,12 @@
+import time
+
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
+from appium.webdriver.appium_service import AppiumService
+
+appium_service = AppiumService()
+
+appium_service.start()
 
 desired_caps = {}
 desired_caps['platformName'] = 'Android'
@@ -14,3 +21,7 @@ driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub",desired_caps)
 
 ele_id = driver.find_element(AppiumBy.ID,"com.code2lead.kwad:id/EnterValue")
 ele_id.click()
+
+time.sleep(5)
+driver.quit()
+appium_service.stop()
