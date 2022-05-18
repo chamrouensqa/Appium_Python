@@ -18,5 +18,11 @@ element_method = driver.find_elements(AppiumBy.CLASS_NAME,"android.widget.Button
 for x in element_method:
     print(x.text)
 
-# time.sleep(2)
-# driver.quit()
+for x in element_method:
+    button = x.text
+    if button == 'ScrollView':
+        x.click()
+        break
+
+time.sleep(2)
+driver.quit()
