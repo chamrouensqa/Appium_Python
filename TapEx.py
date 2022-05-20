@@ -21,7 +21,7 @@ wait = WebDriverWait(driver, 25, poll_frequency=1,ignored_exceptions=[ElementNot
 
 ele = wait.until(lambda x: x.find_element(AppiumBy.ANDROID_UIAUTOMATOR,'new UiScrollable(new UiSelector()).scrollIntoView(text("LONG CLICK"))'))
 actions = TouchAction(driver)
-actions.long_press(ele,5)
+actions.tap(None,734,1717,1)
 actions.perform()
 
 time.sleep(4)
